@@ -1,0 +1,149 @@
+    <html>
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">
+     
+    </head>
+    <body>
+      <div id = "first-page">
+
+      <div id = "left-side-main-page">
+
+        <div id = "buttons-left">
+            <div class = "buttons button1-google" onmouseover="hover(this)" onmouseout="backToNormal(this)" id="homePage"  onclick="homePage()">Google News</div>
+            <div class = "buttons button2-search" id="searchPage" onmouseover="hover(this)" onmouseout="backToNormal(this)" onclick="searchPage()">Search</div>
+          </div>
+
+      </div>
+      <div id = "right-side-main-page">
+          <div></div>
+      <div id = "top-row">
+        <div id = "slideshow-container">
+          <div class = "just-for-display">
+          <img src = "https://content.api.news/v3/images/bin/62800b3a352a6895e4c44a043d287d2f" id = "slideshow-image" alt = "image"/>
+          <div class = "slideshow-text">
+            <p style="size: 18px;"> Nature</p>
+            <p> Beautiful paragraph description hey</p>
+          </div>
+        </div>
+        </div>
+
+        <div id = "my_dataviz">
+          
+        </div>
+
+    </div>
+
+      <div id = "cnn-row">
+        <div class = "news-header">
+          <h2 class = "center-align-heading">CNN</h2>
+          <p class = "dotted-hr">
+        </div>
+      </div>
+        <div id = "flex-container-cnn">
+      </div>
+
+
+      <div id = "fox-row">
+        <div class = "news-header">
+          <h2 class = "center-align-heading">Fox News</h2>
+          <p class = "dotted-hr">
+        </div>
+      </div>
+        <div id = "flex-container-fox">
+          
+      </div>
+    </div>
+
+    <div id = "right-side-second-page" style="display: none;">
+      <div id = "form-container">
+
+        <form id = "myForm">
+
+        <div id = "first-row-search-form">
+          <div class="form-row-one-content">Keyword <span style="color:#f00">*</span> <input id = "keyword" type = "text" required> </input></div>
+          <div class="form-row-one-content">From<span style="color:#f00">*</span> <input type="date" id = "fromDate" required></div>
+          <div class="form-row-one-content">To<span style="color:#f00">*</span> <input type="date" id = "toDate" required></div>
+
+      </div>
+
+      
+   
+
+      <div id = "second-row-search-form">
+   
+
+        <div class="form-row-two-content">Category
+          <select id = "category" onchange="getAllSources('testParam')">
+            <option value = "all" default>All</option>
+            <option value = "business">Business</option>
+            <option value = "entertainment">Entertainment</option>
+            <option value = "general">General</option>
+            <option value = "health">Health</option>
+            <option value = "science">Science</option>
+            <option value = "sports">Sports</option>
+            <option value = "technology">Technology</option>
+        </select>
+        </div>
+
+        <div class="form-row-two-content">Source
+          <select id = "select-sources">
+         <option value = "all" default>All</option></select>
+       </div>
+      </div>
+
+
+    <div id = "third-row-search-form">
+        
+      <button type="submit" class="form-row-three-content" onmouseover="searchFormOnMouseOver(this)" onmouseout = "searchFormOnMouseOut(this)" onclick = "searchWithParams()" id = "search-button-search-form">Search </button>
+      <button  type="button" class="form-row-three-content" onmouseover="searchFormOnMouseOver(this)" onmouseout = "searchFormOnMouseOut(this)" onclick="resetForm()" id = "clear-button-search-form">Clear</button >
+
+  </div>
+ 
+  <!-- <div>
+    <p>Hell</p>
+  </div> -->
+
+  </form>
+
+      </div>
+
+      <div id = "list-of-articles">
+        <!-- <div class="card-list-of-articles card-articles">
+          <div id = "left-image-articles">
+            <img src="me.png" class="list-of-articles-image">
+          </div>
+          <div id = "center-content-articles">
+            <p class= "article-title">Bernie and the football</p>
+            <p class="no-margin article-author"><span class="bold">Author:</span> By Ali Daber Daily mail australia</p>
+            <p class = "article-source no-margin"><span class="bold">Source: </span>Dailymail.co.uk </p>
+            <p class = "article-date no-margin"><span class="bold">Date: </span> 02/10/2020</p>
+            <p class = "article-description no-margin"> One of the anticipated crime drama is slated to make its debut on the small screen later this year</p>
+            <p class = "article-href"><a href = "">See original post</a></p>
+          </div>
+
+          <div class ="right-cross-article">
+            <p>X</p>
+          </div>
+         
+        </div> -->
+      </div>
+      <div id="list-of-articles-2">
+
+      </div>
+      <div id = "show-more-container">
+      <div id = "show-more" onclick="expandCollapse()" onmouseover="searchFormOnMouseOver(this)" onmouseout="searchFormOnMouseOut(this)">Show More</button>
+    </div>
+    </div>
+
+
+  </div>
+
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+      <script src="/static/main.js"></script> 
+
+    </body>
+
+</html>
